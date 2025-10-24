@@ -22,7 +22,7 @@ conda activate vizz_env
 
 You can obtain the dataset for this projects in two ways: 
 
-## Option A. Run download.py 
+ Option A. Run download.py 
  In your terminal, execute 
 
  ```bash
@@ -31,7 +31,7 @@ You can obtain the dataset for this projects in two ways:
  - This will create the data/raw directory if it doesn't exists already.
  - Download dataset
 
-## Option B. Run through the notebook (Recomended) 
+ Option B. Run through the notebook (Recomended) 
  The notebook total_carbon_pipeline.ipynb includes a cell that performs the same download procedure as part of the data preparation pipeline.
 
 # 3. Running SQL Queries in SQLite
