@@ -7,6 +7,12 @@ data/raw/
 data/processed/
 data/output/
 
+# --- DATA (raw and extracted) ---
+data/
+data/raw/
+data/processed/
+data/output/
+
 # Ignore all zip files anywhere
 *.zip
 **/raw/**
@@ -59,7 +65,7 @@ Thumbs.db
 .gitignore~
 *.lock
 
-# Keep folder structure with placeholders ---
-# Keep empty folder structure by tracking .gitkeep files
+# --- KEEP FOLDER STRUCTURE WITH PLACEHOLDERS ---
+# Allow .gitkeep files inside data/ folders
 !data/**/.gitkeep
 
