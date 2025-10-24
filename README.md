@@ -7,44 +7,43 @@ The pipeline integrates geospatial data (raster and vector), executes analytical
 
 ## 1. Environment Setup (Conda)
 
-To ensure reproducibility and avoid dependency conflicts, it is recommended to run this project inside a **Conda environment**.
+To ensure reproducibility and avoid dependency conflicts, I recommend to run this project inside a **Conda environment**.
 
-# Create the environment from the .yml file
-conda env create -f environment.yml
-
-# Activate the environment
-conda activate vizz_env
+### Create the environment from the .yml file
+    conda env create -f environment.yml
 
 ### Activate the environment
     conda activate vizz_env
 
-## 2. Data Download
+##  2. Data Download
 
-You can obtain the dataset for this projects in two ways: 
+  You can obtain the dataset for this project in two ways: 
 
- Option A. Run download.py 
- In your terminal, execute 
+- Option A. Run through the notebook (Recommended)
+   
+  The notebook  ```total_carbon_pipeline.ipynb```includes a cell that performs the same download procedure as part of the data preparation pipeline.
+ 
+- Option B. Run ```download.py```
+   
+  In your terminal, execute 
 
  ```bash
-    python download.py
+  python download.py
  ```
- - This will create the data/raw directory if it doesn't exists already.
- - Download dataset
+  This will create the data/raw directory if it doesn't exists already.
 
- Option B. Run through the notebook (Recomended) 
- The notebook total_carbon_pipeline.ipynb includes a cell that performs the same download procedure as part of the data preparation pipeline.
+## 3. Running SQL Queries in SQLite
 
-# 3. Running SQL Queries in SQLite
+  Processed data is stored in a local SQGLite dataset ```total_carbon.db```
 
-Processed data is stored in a local SQGLite dataset (total_carbon.db)
-You can query it either inside the notebook or using an external SQLite client. 
+  You can query it either inside the notebook or using an external SQLite client. 
  
- #Query format 
+### Query format 
     
     SELECT column_name
     FROM table_name
     WHERE condition;
- ## Example 
+### Example 
     SELECT county_name, total_carbon
     FROM carbon_summary
     WHERE total_carbon > 1000;
