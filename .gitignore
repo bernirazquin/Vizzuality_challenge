@@ -1,0 +1,60 @@
+# --- DATA (raw and extracted) ---
+data/raw/
+data/processed/
+data/output/
+
+# Ignore all zip files anywhere
+*.zip
+**/raw/**
+**/processed/**
+**/output/**
+
+# --- PYTHON / CONDA / ENVIRONMENTS ---
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Conda and virtual environment folders
+.venv/
+venv/
+env/
+conda_env/
+*.conda
+*.egg-info/
+.eggs/
+
+# Environment files generated locally
+.env
+.env.*
+*.env
+
+# --- JUPYTER NOTEBOOKS ---
+# Auto-saved checkpoints
+.ipynb_checkpoints/
+# Jupyter hidden files
+*.nbconvert.ipynb
+
+# --- LOGS / OUTPUTS / TEMP ---
+*.log
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+# --- VSCODE / IDE FILES ---
+.vscode/
+.idea/
+*.code-workspace
+
+# --- GIT / SYSTEM ---
+.gitignore~
+*.lock
+
+# --- OPTIONAL: keep folder structure with placeholders ---
+# (uncomment if you add .gitkeep files to keep empty dirs)
+#!data/**/.gitkeep
