@@ -1,4 +1,4 @@
-## Total Carbon Pipeline
+# Total Carbon Pipeline
 
 This repository provides a reproducible workflow for downloading, processing, and analyzing carbon data across U.S. counties.  
 The pipeline integrates geospatial data (raster and vector), executes analytical steps in Jupyter notebooks, and stores results in a local SQLite database.
@@ -7,42 +7,43 @@ The pipeline integrates geospatial data (raster and vector), executes analytical
 
 ## 1. Environment Setup (Conda)
 
-To ensure reproducibility and avoid dependency conflicts, it is recommended to run this project inside a **Conda environment**.
+To ensure reproducibility and avoid dependency conflicts, I recommend to run this project inside a **Conda environment**.
 
-# Create a new environment (replace <env_name> with your preferred name)
-conda create -n <env_name> python=3.11
+### Create the environment from the .yml file
+    conda env create -f environment.yml
 
-# Activate the environment
-conda activate <env_name>
+### Activate the environment
+    conda activate vizz_env
 
-# Install the required dependencies
-pip install -r requirements.txt
+##  2. Data Download
 
-## 2. Data Download
+  You can obtain the dataset for this project in two ways: 
 
-You can obtain the dataset for this projects in two ways: 
+- Option A. Run through the notebook (Recommended)
+   
+  The notebook  ```total_carbon_pipeline.ipynb```includes a cell that performs the same download procedure as part of the data preparation pipeline.
+ 
+- Option B. Run ```download.py```
+   
+  In your terminal, execute 
 
-# Option A. Run download.py 
- In your terminal, execute python download.py
-
- - This will create the data/raw directory if it doesn't exists already.
- - Download dataset
-
-# Option B. Run through the notebook (Recomended) 
- The notebook total_carbon_pipeline.ipynb includes a cell that performs the same download procedure as part of the data preparation pipeline.
+ ```bash
+  python download.py
+ ```
+  This will create the data/raw directory if it doesn't exists already.
 
 ## 3. Running SQL Queries in SQLite
 
-Processed data is stored in a local SQGLite dataset (total_carbon.db)
-You can query it either inside the notebook or using an external SQLite client. 
+  Processed data is stored in a local SQGLite dataset ```total_carbon.db```
+
+  You can query it either inside the notebook or using an external SQLite client. 
  
- #Query format 
+### Query format 
     
     SELECT column_name
     FROM table_name
     WHERE condition;
- #Example 
-
-SELECT county_name, total_carbon
-FROM carbon_summary
-WHERE total_carbon > 1000;
+### Example 
+    SELECT county_name, total_carbon
+    FROM carbon_summary
+    WHERE total_carbon > 1000;
