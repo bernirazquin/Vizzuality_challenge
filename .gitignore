@@ -1,9 +1,4 @@
-# Ignore all zip files anywhere
-*.zip
-**/raw/**
-**/processed/**
 # --- DATA (raw and extracted) ---
-data/*
 !data/**/.gitkeep
 
 # Ignore all zip files anywhere
@@ -57,8 +52,4 @@ Thumbs.db
 # --- GIT / SYSTEM ---
 .gitignore~
 *.lock
-
-# --- KEEP FOLDER STRUCTURE WITH PLACEHOLDERS ---
-# Allow .gitkeep files inside data/ folders
-!data/**/.gitkeep
 
