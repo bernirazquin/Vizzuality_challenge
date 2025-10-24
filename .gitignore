@@ -3,15 +3,8 @@
 **/raw/**
 **/processed/**
 # --- DATA (raw and extracted) ---
-data/raw/
-data/processed/
-data/output/
-
-# --- DATA (raw and extracted) ---
-data/
-data/raw/
-data/processed/
-data/output/
+data/*
+!data/**/.gitkeep
 
 # Ignore all zip files anywhere
 *.zip
