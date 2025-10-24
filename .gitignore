@@ -2,6 +2,15 @@
 *.zip
 **/raw/**
 **/processed/**
+# --- DATA (raw and extracted) ---
+data/raw/
+data/processed/
+data/output/
+
+# Ignore all zip files anywhere
+*.zip
+**/raw/**
+**/processed/**
 **/output/**
 
 # --- PYTHON / CONDA / ENVIRONMENTS ---
@@ -50,6 +59,7 @@ Thumbs.db
 .gitignore~
 *.lock
 
-# --- OPTIONAL: keep folder structure with placeholders ---
-# (uncomment if you add .gitkeep files to keep empty dirs)
-#!data/**/.gitkeep
+# Keep folder structure with placeholders ---
+# Keep empty folder structure by tracking .gitkeep files
+!data/**/.gitkeep
+
