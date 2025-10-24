@@ -9,7 +9,7 @@ def download_and_extract(url, output_dir):
 
     # Skips if folders already exists. 
     if zip_path.exists() and extract_dir.exists() and any(extract_dir.iterdir()):
-        print(f"Skipping: {extract_dir.name} already exists with content.")
+        print(f"Skipping: {extract_dir.name} already exists.")
         return extract_dir
 
     # Si falta el ZIP, descarga
