@@ -1,6 +1,3 @@
-# --- DATA (raw and extracted) ---
-!data/**/.gitkeep
-
 # Ignore all zip files anywhere
 *.zip
 **/raw/**
