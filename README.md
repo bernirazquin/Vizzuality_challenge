@@ -21,7 +21,7 @@ To ensure reproducibility and avoid dependency conflicts, I recommend to run thi
 
 - Option A. Run through the notebook (Recommended)
    
-  The notebook  ```total_carbon_pipeline.ipynb```includes a cell that performs the same download procedure as part of the data preparation pipeline.
+  The notebook  ```total_carbon_pipeline.ipynb``` includes a cell that performs the same download procedure as part of the data preparation pipeline.
  
 - Option B. Run ```download.py```
    
@@ -34,7 +34,7 @@ To ensure reproducibility and avoid dependency conflicts, I recommend to run thi
 
 ## 3. Running SQL Queries in SQLite
 
-  Processed data is stored in a local SQGLite dataset ```total_carbon.db```
+  Processed data is stored in a local SQLite dataset ```total_carbon.db```
 
   You can query it either inside the notebook or using an external SQLite client. 
  
