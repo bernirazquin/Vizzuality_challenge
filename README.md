@@ -15,6 +15,14 @@ To ensure reproducibility and avoid dependency conflicts, I recommend to run thi
 ### Activate the environment
     conda activate vizz_env
 
+## **Optional**
+  If you prefer to run the entire pipeline all at once, you can run: 
+  ```bash 
+  main.py
+  ```
+  However, for a clearer understanding of the workflow, including pre-visualization, post-visualization, and database query steps,
+  I recommend to follow the process interactively through the Jupyter notebook  ```total_carbon_pipeline.ipynb ```.
+  
 ##  2. Data Download
 
   You can obtain the dataset for this project in two ways: 
