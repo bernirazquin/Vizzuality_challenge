@@ -45,7 +45,7 @@ def download_and_extract(url, output_dir):
 ## Run the download.py file directly ##
 
 if __name__ == "__main__":
-    # === Download configuration ===
+    # Download configuration
     RAW = Path("data/raw")
     RAW.mkdir(parents=True, exist_ok=True)
 
@@ -53,7 +53,7 @@ if __name__ == "__main__":
     counties_dir = download_and_extract(COUNTIES_URL, RAW)
     carbon_dir = download_and_extract(CARBON_URL, RAW)
 
-    # Search for important files
+    # Search for desired files
     shp_path = list(counties_dir.rglob("*.shp"))[0]
     raster_path = next(carbon_dir.rglob("*.tif"))
 
